@@ -19,9 +19,9 @@ pipeline {
                 echo 'Building..'
                 echo "WORKSPACE =  ${env.WORKSPACE}"
                 // copy Job-1
-                def src = new File('${env.WORKSPACE}/job-1.ps1')
-                def dst = new File('D:/6_DEV/Jenkins-Test/run_job-1/job-1.ps1')
-                dst << src.bytes
+                def srcFile = '${env.WORKSPACE}/job-1.ps1'
+                echo "srcFile: $srcFile"
+
             }
         }
         stage('deploy') {

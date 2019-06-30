@@ -1,13 +1,16 @@
 #!/usr/bin/env groovy
 
 pipeline {
-  agent { label 'test-job-on-git' }
-  options {
-    skipDefaultCheckout true
-  }
-  stages {
-    stage ('setup workspace') { 
-      steps {
-      }
-  }
+    agent { label 'test-job-on-git' }
+    options {
+        skipDefaultCheckout true
+    }
+    stages {
+        stage ('setup workspace') { 
+            steps {
+                echo '1: SETUP: step-1'
+
+            }
+        }
+    }
 }

@@ -1,14 +1,22 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent { label 'test-pipeline-in-git' }
-    options {
-        skipDefaultCheckout true
-    }
+    agent any
+
     stages {
-        stage ('setup workspace') { 
+        stage('Build') {
             steps {
-                echo "Halllllooooooooooooo"
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }

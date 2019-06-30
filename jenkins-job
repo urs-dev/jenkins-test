@@ -8,19 +8,19 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('xxxx') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('Test') {
+        stage('deploy') {
             steps {
-                echo 'Testing..'
+                echo 'deploy to run environent ...'
             }
         }
-        stage('Deploy') {
+        stage('run tasks') {
             steps {
-                echo 'Deploying....'
+                echo 'run tasks ...'
             }
         }
     }

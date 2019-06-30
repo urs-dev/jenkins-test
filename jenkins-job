@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 echo 'Job build by: ${username}'
 echo ">>> ${env.BUILD_ID} :: ${env.JOB_NAME} :: ${env.JENKINS_URL}"
-echo "Workspace = ${env.WORKSPACE}"
+echo "$WORKSPACE"
+// echo "Workspace = ${env.WORKSPACE}"
 
 pipeline {
     agent any

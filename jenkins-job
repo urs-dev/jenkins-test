@@ -16,8 +16,8 @@ pipeline {
                 script {
                     if (ENVIRONMENT_NAME == 'development') {
                         ENV_NAME = 'Development'
-                    } else if (ENVIRONMENT_NAME == 'release') {
-                        ENV_NAME = 'Production'
+                    } else if (ENVIRONMENT_NAME == 'master') {
+                        ENV_NAME = 'master'
                     }
                 }
                 echo 'Building Branch: ' + env.BRANCH_NAME

@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 echo 'Job build by: ${username}'
-echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+echo ">>> ${env.BUILD_ID} :: ${env.JOB_NAME} :: ${env.JENKINS_URL}"
 pipeline {
     agent any
 

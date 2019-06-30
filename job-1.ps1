@@ -5,6 +5,7 @@
 #                   writes a simple text file next to this script file
 #
 #   Urs, 30.6.2019
+#   Urs, 30.6.2019 - 2 test with GitHub
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 Clear-Host

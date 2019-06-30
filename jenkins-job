@@ -17,6 +17,8 @@ pipeline {
         stage('xxxx') {
             steps {
                 echo 'Building..'
+                echo "WORKSPACE =  ${env.WORKSPACE}"
+                echo 'Job build by: ${env.USERNAME}'
                 // copy Job-1
                 //  def src = new File('c:/temp/src.zip')
                 //  def dst = new File('c:/temp/dst.zip')

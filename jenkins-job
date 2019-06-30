@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent { label 'test-job-on-git' }
+    agent { label 'test-pipeline-in-git' }
     options {
         skipDefaultCheckout true
     }

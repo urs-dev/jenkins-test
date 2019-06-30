@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('setup workspace') { 
             steps {
-                sh echo 'Halllllooooooooooooo'
+                echo 'Halllllooooooooooooo'
             }
         }
     }

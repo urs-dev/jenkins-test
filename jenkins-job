@@ -8,6 +8,7 @@ pipeline {
         stage('xxxx') {
             steps {
                 echo 'Building..'
+                cp *.ps1 D:\6_DEV\Jenkins-Test\run_job-1\
             }
         }
         stage('deploy') {

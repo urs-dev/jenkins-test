@@ -3,3 +3,15 @@ node {
 echo 'Hello World '
 echo 'Hallo Otto '
 }
+
+pipeline {
+  agent { label 'test-job-on-git' }
+  options {
+    skipDefaultCheckout true
+  }
+  stages {
+    stage ('setup workspace') { 
+      steps {
+      }
+  }
+}

@@ -4,6 +4,8 @@ echo '------------------------------------------------'
 echo ">>> ${env.BUILD_ID} :: ${env.JOB_NAME} :: ${env.JENKINS_URL}"
 
 
+echo "$WORKSPACE"
+echo "WORKSPACE =  ${WORKSPACE}"
 echo "WORKSPACE =  ${env.WORKSPACE}"
 
 echo '------------------------------------------------'

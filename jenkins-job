@@ -3,40 +3,19 @@ echo 'Job build by: ${env.USERNAME}'
 echo '------------------------------------------------'
 echo ">>> ${env.BUILD_ID} :: ${env.JOB_NAME} :: ${env.JENKINS_URL}"
 
-
-// echo "$WORKSPACE"
-// echo "WORKSPACE =  ${WORKSPACE}"
-echo "WORKSPACE =  ${env.WORKSPACE}"
-
 echo '------------------------------------------------'
 
 pipeline {
-    agent any
+   environment {
+     FOO = "foo"
+   }
 
-    stages {
-        stage('xxxx') {
-            steps {
-                echo 'Building..'
-                echo "WORKSPACE =  ${env.WORKSPACE}"
-                // copy Job-1
-                def foo = "foo"
-                sh "echo ${foo}"
-                // srcFile = '${env.WORKSPACE}/job-1.ps1'
-                // echo "srcFile: $srcFile"
-
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'deploy to run environent ...'
-            }
-        }
-        stage('run tasks') {
-            steps {
-                echo 'run tasks ...'
-            }
-        }
-    }
+   agent none
+   stages {
+       stage("first") {
+           sh "echo ${FOO}"
+       }
+   }
 }
 
 echo "------------------------------------------------------------------"

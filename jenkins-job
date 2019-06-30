@@ -26,4 +26,5 @@ pipeline {
     }
 }
 
+echo "------------------------------------------------------------------"
 echo "Job finished: ${env.BUILD_ID} on ${env.JENKINS_URL}"

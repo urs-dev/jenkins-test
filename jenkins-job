@@ -3,6 +3,9 @@ echo 'Job build by: ${username}'
 echo ">>> ${env.BUILD_ID} :: ${env.JOB_NAME} :: ${env.JENKINS_URL}"
 pipeline {
     agent any
+    options {
+        skipDefaultCheckout true
+    }
 
     stages {
         stage('Build') {

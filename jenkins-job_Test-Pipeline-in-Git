@@ -1,9 +1,4 @@
 #!/usr/bin/env groovy
-node {
-echo 'Hello World '
-echo 'Hallo Otto '
-}
-
 pipeline {
   agent { label 'test-job-on-git' }
   options {
@@ -12,6 +7,7 @@ pipeline {
   stages {
     stage ('setup workspace') { 
       steps {
+        echo 'JENKINS: setup workspace'
       }
   }
 }

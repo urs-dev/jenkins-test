@@ -8,8 +8,6 @@ pipeline {
     stages {
         stage ('setup workspace') { 
             steps {
-                echo '1: SETUP: step-1'
-
             }
         }
     }

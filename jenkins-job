@@ -19,8 +19,10 @@ pipeline {
                 echo 'Building..'
                 echo "WORKSPACE =  ${env.WORKSPACE}"
                 // copy Job-1
-                def srcFile = '${env.WORKSPACE}/job-1.ps1'
-                echo "srcFile: $srcFile"
+                def foo = "foo"
+                sh "echo ${foo}"
+                // srcFile = '${env.WORKSPACE}/job-1.ps1'
+                // echo "srcFile: $srcFile"
 
             }
         }

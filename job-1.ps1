@@ -6,6 +6,8 @@
 #
 #   Urs, 30.6.2019
 #   Urs, 30.6.2019 - 2 test with GitHub
+#   Urs, 30.6.2019 - 3 dummy change: check if new file is in Jenkins works space
+#
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 Clear-Host

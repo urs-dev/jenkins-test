@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+def myVar = "Hallo Otto"
+
 pipeline {
     agent any
     options {
@@ -8,7 +10,7 @@ pipeline {
     stages {
         stage("first") {
             steps {
-            //    sh "echo ${foo}"
+                    echo ${myVar}
                     echo "STAGE: first, STEP-1"
             }
         }

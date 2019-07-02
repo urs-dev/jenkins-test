@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 
 def myVar = "Hallo Otto"
+def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git\\"
 
 pipeline {
     agent any
@@ -13,13 +14,14 @@ pipeline {
                 echo "--- STAGE 1 -----------------------------------------------------"
                 //sh "echo ${myVar}"  // Variable innerhalb von string
                 echo myVar
-		echo JENKINS_HOME
-		echo "${JENKINS_HOME}"
-		dir("${JENKINS_HOME}/workspace")
+		//echo JENKINS_HOME
+		//echo "${JENKINS_HOME}"
+		//dir("${JENKINS_HOME}/workspace")
+		bat ("dir $workDir")
 		echo "------------"                // echo HOSTNAME
                 // echo "STAGE: first, STEP-1"
                 // bat 'wmic computersystem get name'
-                    		bat ("dir")
+                //    		bat ("dir")
 		echo "------------"
 		// bat("xcopy '.\\job-1.ps1' '.\\job-2.ps1' ")
 		    

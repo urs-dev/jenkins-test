@@ -9,6 +9,9 @@ pipeline {
         stage("first") {
             steps {
             //    sh "echo ${foo}"
+                step {
+                    echo "STAGE: first, STEP-1"
+                }
             }
         }
     }

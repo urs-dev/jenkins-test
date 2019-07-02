@@ -13,6 +13,7 @@ pipeline {
                 echo "--- STAGE 1 -----------------------------------------------------"
                 //sh "echo ${myVar}"  // Variable innerhalb von string
                 echo myVar
+		dir("${JENKINS_HOME}/workspace")
                 // echo HOSTNAME
                 //echo "STAGE: first, STEP-1"
                 // bat 'wmic computersystem get name'

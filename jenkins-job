@@ -8,8 +8,8 @@ def PowerShell(psCmd) {
 }
 
 pipeline {
-    agent any
-        options {
+    agent { label 'test-pipeline-in-git' }
+    options {
         skipDefaultCheckout true
     }
     stages {

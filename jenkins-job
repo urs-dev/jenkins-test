@@ -30,7 +30,7 @@ pipeline {
 		bat("xcopy 'job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
 		    
 		// bat("powershell.exe . '.\\job-1.ps1'")
-		    
+		bat ("dir")
 		    
              //   def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim() as Integer
              //   println("disk_size = ${disk_size}")

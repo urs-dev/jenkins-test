@@ -10,11 +10,16 @@ pipeline {
     stages {
         stage("first") {
             steps {
-                    //sh "echo ${myVar}"  // Variable innerhalb von string
-                    echo myVar
-                    echo "STAGE: first, STEP-1"
-                    echo "--- calling powershell script ---"
-                    PowerShell(". '.\\job-1.ps1'") 
+                //sh "echo ${myVar}"  // Variable innerhalb von string
+                echo myVar
+                echo HOSTNAME
+                echo "STAGE: first, STEP-1"
+                bat 'wmic computersystem get name'
+                    
+                bat 'echo %PATH%'
+                echo env.PATH
+                echo "--- calling powershell script ---"
+                PowerShell(". '.\\job-1.ps1'") 
             }
         }
     }

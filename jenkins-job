@@ -16,7 +16,7 @@ pipeline {
                 // echo HOSTNAME
                 //echo "STAGE: first, STEP-1"
                 // bat 'wmic computersystem get name'
-                    
+                    		bat ("dir")
                 // bat 'echo %PATH%'
                 // echo env.PATH
                 echo "--- calling powershell script ---"
@@ -27,10 +27,10 @@ pipeline {
             steps{
                 echo "--- STAGE 2 -----------------------------------------------------"
 		// bat("xcopy '.\\test-pipeline-in-git\\job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
-		bat("xcopy 'job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
+		// bat("xcopy 'job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
 		    
 		// bat("powershell.exe . '.\\job-1.ps1'")
-		bat ("dir")
+
 		    
              //   def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim() as Integer
              //   println("disk_size = ${disk_size}")

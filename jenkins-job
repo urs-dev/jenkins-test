@@ -3,7 +3,7 @@
 def foo = "foo"
 
 pipeline {
-    agent none
+    agent any
     stages {
         stage("first") {
             steps {

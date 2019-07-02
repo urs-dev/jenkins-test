@@ -13,6 +13,8 @@ pipeline {
                     //sh "echo ${myVar}"  // Variable innerhalb von string
                     echo myVar
                     echo "STAGE: first, STEP-1"
+                    echo "--- calling powershell script ---"
+                    PowerShell(". '.\\job-1.ps1'") 
             }
         }
     }

@@ -19,7 +19,7 @@ pipeline {
                 // bat 'wmic computersystem get name'
                 //    		bat ("dir")
 		echo "------------"
-		bat("xcopy '$workDir\\job-1.ps1' '$workDir\\job-2.ps1'  /O /X /E /H /K")
+		bat("xcopy '$workDir\\jenkins-job' '$workDir\\bbbbbbbbb'  /O /X /E /H /K")
 		    
 		    // 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
                 // bat 'echo %PATH%'

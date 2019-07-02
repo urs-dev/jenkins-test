@@ -12,7 +12,7 @@ pipeline {
             steps {
                 //sh "echo ${myVar}"  // Variable innerhalb von string
                 echo myVar
-                echo HOSTNAME
+                //echo HOSTNAME
                 echo "STAGE: first, STEP-1"
                 bat 'wmic computersystem get name'
                     

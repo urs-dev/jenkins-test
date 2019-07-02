@@ -6,7 +6,9 @@ pipeline {
     agent none
     stages {
         stage("first") {
-            sh "echo ${foo}"
+            step {
+                sh "echo ${foo}"
+            }
         }
     }
 }

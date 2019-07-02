@@ -14,11 +14,11 @@ pipeline {
                 //sh "echo ${myVar}"  // Variable innerhalb von string
                 echo myVar
                 // echo HOSTNAME
-                echo "STAGE: first, STEP-1"
-                bat 'wmic computersystem get name'
+                //echo "STAGE: first, STEP-1"
+                // bat 'wmic computersystem get name'
                     
-                bat 'echo %PATH%'
-                echo env.PATH
+                // bat 'echo %PATH%'
+                // echo env.PATH
                 echo "--- calling powershell script ---"
                 // PowerShell(". '.\\job-1.ps1'") 
             }
@@ -26,8 +26,9 @@ pipeline {
         stage("Stage-2") {
             steps{
                 echo "--- STAGE 2 -----------------------------------------------------"
-		
-		bat("powershell.exe . '.\\job-1.ps1'")
+		bat("xcopy '.\\job-1.ps1' 'D:\6_DEV\Jenkins-Test\jenkins_work\' /O /X /E /H /K")
+		    
+		// bat("powershell.exe . '.\\job-1.ps1'")
 		    
 		    
              //   def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim() as Integer

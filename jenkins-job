@@ -26,7 +26,8 @@ pipeline {
         stage("Stage-2") {
             steps{
                 echo "--- STAGE 2 -----------------------------------------------------"
-		bat("xcopy '.\\test-pipeline-in-git\\job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
+		// bat("xcopy '.\\test-pipeline-in-git\\job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
+		bat("xcopy 'job-1.ps1' 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")
 		    
 		// bat("powershell.exe . '.\\job-1.ps1'")
 		    

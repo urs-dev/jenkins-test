@@ -10,7 +10,8 @@ pipeline {
     stages {
         stage("first") {
             steps {
-                    sh "echo ${myVar}"
+                    //sh "echo ${myVar}"  // Variable innerhalb von string
+                    echo myVar
                     echo "STAGE: first, STEP-1"
             }
         }

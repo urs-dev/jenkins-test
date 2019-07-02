@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage("first") {
             steps {
-                    echo ${myVar}
+                    sh "echo ${myVar}"
                     echo "STAGE: first, STEP-1"
             }
         }

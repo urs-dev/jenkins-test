@@ -27,7 +27,7 @@ pipeline {
 		echo myFile
 		// echo myFilePath
 		    script {
-			def xxx = "$myFilePath\\$myFile"    
+			def xxx = "$myPath\\$myFile"    
 			echo xxx
 		    }
 		echo "------------"		    

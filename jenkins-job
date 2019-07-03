@@ -27,10 +27,15 @@ pipeline {
 		echo myFile
 		// echo myFilePath
 		    script {
-			def xxx = "$myPath\\$myFile"    
-			echo xxx
+			def myFilePath = "$myPath\\$myFile"    
+			    		    			echo "myFilePath = $myFilePath"
+
 		    }
-		echo "------------"		    
+		echo "------------"	
+				    			echo "myFilePath = $myFilePath"
+
+		echo "------------"	
+
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")
 		

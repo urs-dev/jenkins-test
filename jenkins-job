@@ -26,6 +26,7 @@ pipeline {
 		echo myPath
 		echo myFile
 		//echo myFilePath
+		echo "$myFilePath\\$myFile"
 		echo "------------"		    
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")

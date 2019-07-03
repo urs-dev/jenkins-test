@@ -5,7 +5,7 @@ def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git"
 
 def myPath = "D:\\6_DEV\\Jenkins-Test\\jenkins_work\\AAA AAA"
 def myFile = "aaa.txt"
-def myFilePath = "$myFilePath\\$myFile"
+// def myFilePath = "$myFilePath\\$myFile"
 
 pipeline {
     agent any
@@ -25,7 +25,7 @@ pipeline {
 		echo "------------"		    
 		echo myPath
 		echo myFile
-		echo myFilePath
+		//echo myFilePath
 		echo "------------"		    
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")

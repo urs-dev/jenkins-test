@@ -4,6 +4,7 @@ def myVar = "Hallo Otto"
 def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git"
 
 def myFilePath = "D:\\6_DEV\\Jenkins-Test\\jenkins_work\\AAA AAA"
+def myFile = "aaa.txt"
 
 pipeline {
     agent any
@@ -22,7 +23,7 @@ pipeline {
                 //    		bat ("dir")
 		echo "------------"
 		    
-		
+		echo File.join("path", "to", "join")
 		    
 		echo myFilePath
 

@@ -6,6 +6,8 @@ def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git"
 def myPath = "D:\\6_DEV\\Jenkins-Test\\jenkins_work\\AAA AAA"
 def myFile = "aaa.txt"
 // def myFilePath = "$myFilePath\\$myFile"
+def workFile = "job-1.ps1"
+def prjDir = "D:\\6_DEV\\Jenkins-Test\\run_job-1"
 
 pipeline {
     agent any
@@ -29,12 +31,20 @@ pipeline {
 		    script {
 			def myFilePath = "$myPath\\$myFile"    
 			echo "myFilePath 1 = $myFilePath"
-
 		    }
-		echo "------------"	
-		echo "myFilePath 2 = $myFilePath"
-
-		echo "------------"	
+		
+		    // copy files from WORKSPACE to project directory
+		    script {
+			echo "workDir     : $workDir"
+			echo "workFile    : $workFile"
+			
+			def srcFilePath = "$workDir\\$workFile"
+			def dstFilePath = "$prjDir\\$workFile"
+			    
+			echo "srcFilePath  = $srcFilePath"
+			echo "dstFilePath  = $dstFilePath"
+			    
+		    }
 
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")

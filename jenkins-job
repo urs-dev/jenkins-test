@@ -26,7 +26,8 @@ pipeline {
 		echo myPath
 		echo myFile
 		// echo myFilePath
-		echo "$myPath\\$myFile"
+		def newFilePath = "$myPath\\$myFile"
+		echo "newFilePath = $newFilePath"
 		echo "------------"		    
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")

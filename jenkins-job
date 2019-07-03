@@ -19,12 +19,16 @@ pipeline {
                 // bat 'wmic computersystem get name'
                 //    		bat ("dir")
 		echo "------------"
+		    
+		def myFilePath = "D:\6_DEV\Jenkins-Test\jenkins_work\AAA AAA"
+		    
+		echo myFilePath
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")
 		
 		// OK   bat ("xcopy D:\\6_DEV\\Jenkins-Test\\jenkins_work\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")
 		    
-		bat ("xcopy \"D:\\6_DEV\Jenkins-Test\\jenkins_work\\AAA AAA\\aaa.txt\"   C:\\Users\\Urs\\_aaa\\bbb  /Y   C:\\Users\\Urs\\_aaa\\bbb  /Y ")
+		// bat ("xcopy \"D:\\6_DEV\Jenkins-Test\\jenkins_work\\AAA AAA\\aaa.txt\"   C:\\Users\\Urs\\_aaa\\bbb  /Y   C:\\Users\\Urs\\_aaa\\bbb  /Y ")
 		    
 		    
 		    // 'D:\\6_DEV\\Jenkins-Test\\jenkins_work\\job-1.ps1' /O /X /E /H /K")

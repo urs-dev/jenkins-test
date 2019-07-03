@@ -43,6 +43,8 @@ pipeline {
 			    
 			echo "srcFilePath  = $srcFilePath"
 			echo "dstFilePath  = $dstFilePath"
+			
+			bat ("xcopy $srcFilePath  $dstFilePath ")
 			    
 		    }
 

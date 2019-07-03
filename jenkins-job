@@ -6,7 +6,6 @@ def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git"
 def myPath = "D:\\6_DEV\\Jenkins-Test\\jenkins_work\\AAA AAA"
 def myFile = "aaa.txt"
 // def myFilePath = "$myFilePath\\$myFile"
-def newFilePath = ""
 
 pipeline {
     agent any
@@ -27,8 +26,10 @@ pipeline {
 		echo myPath
 		echo myFile
 		// echo myFilePath
-		newFilePath = "$myPath\\$myFile"
-		echo "newFilePath = $newFilePath"
+		    script {
+			def myFilePath = "$myFilePath\\$myFile"    
+			    echo "myFilePath = $myFilePath"
+		    }
 		echo "------------"		    
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")

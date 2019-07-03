@@ -3,8 +3,9 @@
 def myVar = "Hallo Otto"
 def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git"
 
-def myFilePath = "D:\\6_DEV\\Jenkins-Test\\jenkins_work\\AAA AAA"
+def myPath = "D:\\6_DEV\\Jenkins-Test\\jenkins_work\\AAA AAA"
 def myFile = "aaa.txt"
+def myFilePath = "$myFilePath\\$myFile"
 
 pipeline {
     agent any
@@ -21,11 +22,11 @@ pipeline {
                 // echo "STAGE: first, STEP-1"
                 // bat 'wmic computersystem get name'
                 //    		bat ("dir")
-		echo "------------"
-		    
-		echo File.join("path", "to", "join")
-		    
+		echo "------------"		    
+		echo myPath
+		echo myFile
 		echo myFilePath
+		echo "------------"		    
 
 		// OK   bat ("xcopy C:\\Users\\Urs\\_aaa\\aaa.txt   C:\\Users\\Urs\\_aaa\\bbb  /Y ")
 		

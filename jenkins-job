@@ -3,7 +3,7 @@
 def myVar = "Hallo Otto"
 def workDir = "${JENKINS_HOME}\\workspace\\test-pipeline-in-git"
 
-def myFilePath = "D:\6_DEV\Jenkins-Test\jenkins_work\AAA AAA"
+def myFilePath = "D:\6_DEV/Jenkins-Test/jenkins_work/AAA AAA"
 
 pipeline {
     agent any
